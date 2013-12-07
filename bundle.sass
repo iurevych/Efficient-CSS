@@ -1,0 +1,42 @@
+@import 'normalize.css'
+
+$firm: #fc7d08
+
+// Buttons
+// -------
+=button
+  background-color: #bbb
+  color: #fff
+  display: inline-block
+  line-height: normal
+  font-size: 18px
+  padding: 10px 15px
+  vertical-align: middle
+  text-align: center
+  text-decoration: none
+
+=buttons
+  .button
+    +button
+
+    &.is-block
+      display: block
+
+    &.is-large
+      font-size: 20px
+      padding: 15px 25px
+
+    &.is-mini
+      font-size: 16px
+      padding: 5px 8px
+
+    &.is-firm
+      background-color: $firm
+
++buttons
+
+.container
+  margin: auto
+  padding: 20px 0
+  width: 960px
+
