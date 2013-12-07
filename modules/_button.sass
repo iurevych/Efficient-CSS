@@ -1,0 +1,42 @@
+// Buttons
+// -------
+=button-pseudos($color: #bbb)
+  background-color: $color
+  &:hover,
+  &:focus
+    background-color: scale-color($color, $lightness: -5%)
+  &:active
+    background-color: scale-color($color, $lightness: -10%)
+
+=button
+  color: #fff
+  display: inline-block
+  line-height: normal
+  font-size: 18px
+  padding: 10px 15px
+  vertical-align: middle
+  text-align: center
+  text-decoration: none
+  +button-pseudos(#bbb)
+
+=button-colors
+  &.is-firm
+    +button-pseudos($firm)
+
+=button-sizes
+  &.is-large
+    font-size: 20px
+    padding: 15px 25px
+
+  &.is-mini
+    font-size: 16px
+    padding: 5px 8px
+
+=buttons
+  .button
+    +button
+    +button-sizes
+    +button-colors
+    &.is-block
+      display: block
+
